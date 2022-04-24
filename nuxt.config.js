@@ -15,9 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/styles/main.css',
-  ],
+  css: ['@/assets/styles/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,8 +42,14 @@ export default {
       },
     },
   },
+
+  generate: {
+    dir: 'public',
+  },
+
   env: {
     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
-    SHOPIFY_STOREFRONT_ACCESS_TOKEN: process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-  }
+    SHOPIFY_STOREFRONT_ACCESS_TOKEN:
+      process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  },
 }
