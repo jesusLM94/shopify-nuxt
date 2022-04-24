@@ -13,8 +13,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'ProductList',
+  name: 'ProductCard',
   props: {
     product: {
       node: {
