@@ -2,17 +2,16 @@
   <div>
     {{ product.title }}
   </div>
-
 </template>
 
 <script>
-import {getAllProducts, getProduct} from '../../api'
+import { getAllProducts, getProduct } from '../../api'
 
 export default {
   name: 'ProductsPage',
   data() {
     return {
-      product: {}
+      product: {},
     }
   },
 
@@ -23,10 +22,10 @@ export default {
 
   generate: {
     routes() {
-      return this.products.map(product => {
-        return  `products/${product.node.handle}`
+      return this.products.map((product) => {
+        return `products/${product.node.handle}`
       })
-    }
-    }
+    },
+  },
 }
 </script>
